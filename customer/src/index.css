@@ -1,0 +1,95 @@
+/* .sign-form{
+  /* display:block; */
+/* }  */
+ /* .body{
+   font-family: 'Bumper Sticker DEMO', sans-serif !important;
+
+ } */
+  /* .title-content{
+    font-family: "Bumper Sticker DEMO", sans-serif !important;
+  } */
+
+  .sign-from{
+    display: block !important;
+}
+
+
+header{
+    position: absolute;
+    top:0 ! important;
+
+}
+.menu-item::after{
+    display: none !important;
+
+}
+.select::after{
+    display: none !important;
+}
+h6{
+    font-family: "Bumper Sticker DEMO", sans-serif !important;
+    letter-spacing: lpx;
+}
+.title-content{
+    font-family: "Bumper Sticker DEMO", sans-serif !important;
+    letter-spacing: lpx;
+    margin-top: 60px;
+}
+.Dropdown-control{
+    border-radius: 6px !important;
+    width: 150px;
+}
+.Dropdown-control.Pending{
+color: #ee9902 !important;
+border: 2px solid #ee9902  !important;
+background-color: transparent  !important;
+}
+
+
+.Dropdown-arrow.Pending{
+color: #ee9902 !important;
+border: 2px solid #ee9902  !important;
+background-color: transparent  !important;
+}
+
+.Dropdown-control.Processing{
+color: #691af5 !important;
+border: 2px solid #691af5  !important;
+background-color: transparent  !important;
+}
+
+
+.Dropdown-arrow.Processing{
+color: #691af5 !important;
+border: 2px solid #691af5  !important;
+background-color: transparent  !important;
+}
+
+
+.Dropdown-control.Delivered{
+color: #4aba4e !important;
+border: 2px solid #4aba4e  !important;
+background-color: transparent  !important;
+}
+
+.Dropdown-control.Delivered{
+color: #4aba4e !important;
+border: 2px solid #4aba4e  !important;
+background-color: transparent  !important;
+}
+
+.Dropdown-control.Cancelled{
+color: #d85656 !important;
+border: 2px solid #d85656  !important;
+background-color: transparent  !important;
+}
+
+.Dropdown-arroe.Cancelled{
+color: #d85656 !important;
+border: 2px solid #d85656  !important;
+background-color: transparent  !important;
+}
+
+.layout-wrap.section-menu-left .center .menu-item a:hover .text{
+    color: black !important
+}
