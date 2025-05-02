@@ -61,13 +61,13 @@ function AdminDashboard() {
                                             <div className="wg-chart-default">
                                                 <div className="flex items-center justify-between">
                                                     <div className="flex items-center gap14">
-                                                        <div className="image">
+                                                        {/* <div className="image">
                                                             
                                                         <i class="fa-solid fa-layer-group"></i>
-                                                        </div>
-                                                        <div>
-                                                            <div className="body-text mb-2">Total Categories</div>
-                                                            <h4>{categories}</h4>
+                                                        </div> */}
+                                                        <div style={{width:"240px", display:"flex",flexDirection:"column", justifyContent:"center", alignItems:"center", gap:"1.5rem"}}>
+                                                            <div className="body-text mb-2" style={{ fontWeight:"600px",fontSize:"large"}}>Total Categories</div>
+                                                            <div><p style={{ fontWeight:"600px",fontSize:"large"}}>{categories}</p></div>
                                                         </div>
                                                     </div>
                                                     
@@ -79,13 +79,13 @@ function AdminDashboard() {
                                             <div className="wg-chart-default">
                                                 <div className="flex items-center justify-between">
                                                     <div className="flex items-center gap14">
-                                                        <div className="image">
+                                                        {/* <div className="image">
                                                          
                                                         <i class="fa-solid fa-box-open"></i>
-                                                        </div>
-                                                        <div>
-                                                            <div className="body-text mb-2">Total Products</div>
-                                                            <h4>{products}</h4>
+                                                        </div> */}
+                                                        <div style={{width:"240px", display:"flex",flexDirection:"column", justifyContent:"center", alignItems:"center", gap:"1.5rem"}}>
+                                                            <div className="body-text mb-2" style={{ fontWeight:"600px",fontSize:"large"}}>Total Products</div>
+                                                            <div><p style={{ fontWeight:"600px",fontSize:"large"}}>{products}</p></div>
                                                         </div>
                                                     </div>
                                                    
@@ -97,13 +97,13 @@ function AdminDashboard() {
                                             <div className="wg-chart-default">
                                                 <div className="flex items-center justify-between">
                                                     <div className="flex items-center gap14">
-                                                        <div className="image">
+                                                        {/* <div className="image">
                                                           
                                                         <i class="fa-solid fa-rectangle-list"></i>
-                                                        </div>
-                                                        <div>
-                                                            <div className="body-text mb-2">Total Order</div>
-                                                            <h4>6</h4>
+                                                        </div> */}
+                                                        <div style={{width:"240px", display:"flex",flexDirection:"column", justifyContent:"center", alignItems:"center", gap:"1.5rem"}}>
+                                                            <div className="body-text mb-2" style={{ fontWeight:"600px",fontSize:"large"}}>Total Order</div>
+                                                           <div><p style={{ fontWeight:"600px",fontSize:"large"}}>6</p></div>
                                                         </div>
                                                     </div>
                                                     
@@ -115,13 +115,13 @@ function AdminDashboard() {
                                             <div className="wg-chart-default">
                                                 <div className="flex items-center justify-between">
                                                     <div className="flex items-center gap14">
-                                                        <div className="image">
+                                                        {/* <div className="image">
                                                             
                                                         <i class="fa-solid fa-money-bill"></i>
-                                                        </div>
-                                                        <div>
-                                                            <div className="body-text mb-2">Total Sales</div>
-                                                            <h4>5</h4>
+                                                        </div> */}
+                                                        <div style={{width:"240px", display:"flex",flexDirection:"column", justifyContent:"center", alignItems:"center", gap:"1.5rem"}}>
+                                                            <div className="body-text mb-2" style={{ fontWeight:"600px",fontSize:"large"}}>Total Sales</div>
+                                                            <div><p style={{ fontWeight:"600px",fontSize:"large"}}>5</p></div>
                                                         </div>
                                                     </div>
                                                    

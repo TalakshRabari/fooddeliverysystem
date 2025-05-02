@@ -4,8 +4,10 @@
 // import "./css/vendor/font-awesome.css"
 // import "./css/vendor/slick-theme.css"
 // import "./css/vendor/slick.css"
+import HeaderAdmin from "../../../admin/src/components/HeaderAdmin"
 import Footer from "../component/Footer"
 import Header from "../component/Header"
+import HeaderUsedashboard from "../component/HeaderUserdashboard"
 import PageTitle from "../component/PageTitle"
 
 function Contact() {
@@ -15,7 +17,7 @@ function Contact() {
                 {/* Main Wrapper Start */}
                 <div id="scroll-container">
                     {/* HEADER MENU START */}
-                    <Header/>
+                    <HeaderUsedashboard/>
                     {/* HEADER MENU END */}
                     {/* TITLE BANNER START */}
                      <PageTitle title="Contact"/>
@@ -199,8 +201,7 @@ function Contact() {
                                     {/* Location Map */}
                                     <div className="map">
                                         <div className="map-wrapper">
-                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d443088.05176831636!2d-95.73093531411777!3d29.81736469329602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640b8b4488d8501%3A0xca0d02def365053b!2sHouston%2C%20TX%2C%20USA!5e0!3m2!1sen!2s!4v1716960714220!5m2!1sen!2s" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade">
-                                            </iframe>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58956.8927802538!2d72.90353396041122!3d22.54894642570128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e4e7efd0c8885%3A0xa9a0b93c0c4b5215!2sAnand%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1745564657369!5m2!1sen!2sin" width={600} height={450} style={{border: 0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
                                         </div>
                                     </div>
                                     {/* Location Map */}

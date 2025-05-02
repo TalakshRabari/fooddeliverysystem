@@ -6,6 +6,7 @@
 // import "./css/vendor/slick.css"
 import Footer from "../component/Footer"
 import Header from "../component/Header"
+import HeaderUsedashboard from "../component/HeaderUserdashboard"
 import PageTitle from "../component/PageTitle"
 
 function About() {
@@ -13,7 +14,7 @@ function About() {
         <>
             <div>
                 {/* HEADER MENU START */}
-                <Header/>
+                <HeaderUsedashboard/>
                 {/* HEADER MENU END */}
                 {/* TITLE BANNER START */}
                 <PageTitle title="About"/>

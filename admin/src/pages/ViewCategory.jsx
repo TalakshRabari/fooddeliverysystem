@@ -158,10 +158,10 @@ function ViewCategory() {
                     {filteredCategories && filteredCategories.length > 0 ? (
                       filteredCategories.map((category) => (
 
-                        <ul className="flex flex-column" style={{ paddingLeft: 0 }} key={category.id}>
+                        <ul className="flex flex-column" style={{ paddingLeft: 0 ,margin:"5px"  }} key={category.id}>
                           <li className="product-item gap14">
                             <div className="flex items-center justify-between gap20 flex-grow">
-                              <div className="name">{category.name}</div>
+                              <div className="name" style={{fontWeight:"bolder", fontSize:"medium"}}>{category.name}</div>
                               <div className="body-text">{category.categoryid}</div>
                               <div className="body-text">{category.desc}</div>
                               <div

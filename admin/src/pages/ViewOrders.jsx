@@ -162,7 +162,7 @@ useEffect(()=>{
                                        <div className="name" style={{position:"relative"}}>
                                                  <Link to="/customer/prpducts" className="body-title-2">{order.id}</Link>
                                        </div>
-                                       <div className="name">{order.date  && new Date(order.date.seconds * 1000).toLocaleString()}</div>
+                                       <div className="name"style={{fontWeight:"bolder", fontSize:"medium"}}>{order.date  && new Date(order.date.seconds * 1000).toLocaleString()}</div>
                                        <div className="body-text">{order.fnm} {order.lnm}</div>
                                        <div className="body-text">₹{order.totalPrice}</div>
                                        <div className="body-text" style={{color:"green"}} >

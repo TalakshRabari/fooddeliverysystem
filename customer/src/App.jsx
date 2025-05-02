@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Route , Routes } from 'react-router'
+import { Navigate, Route , Routes } from 'react-router'
 import { ToastContainer, toast } from 'react-toastify';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -7,6 +7,7 @@ import './App.css'
 
 import {Home,Contact,Checkout,Menu,Dashboard,Login,Register,About,ProductDetails,Settings,Shop,Products,ViewOrderHistory,Invoice} from './pages'
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import useUserStore from './store/customer';
 // import Login from './pages/customer/Login'
 // import Register from './pages/customer/Register'
 // import Contact from './pages/customer/Contact'
@@ -43,7 +44,7 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth';
 function App() {
   
   const [user , setUser] = useState(null);
-
+  let isuser = useUserStore((store) => store.isuser)
   // useEffect(() =>{
   //   const auth = getAuth();
 
@@ -62,8 +63,6 @@ function App() {
     <>
      
       <ToastContainer />
-
-
       <Routes>
         <Route index element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -71,21 +70,16 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/shop" element={<Shop />} />
-
-        <Route path="/customer" >
-          <Route index element={<Dashboard/>}/> 
-           {/* <Route path="/customer/dashboard" element={<Dashboard/>}/> */}
-          <Route path="/customer/checkout" element={<Checkout />} />
-          <Route path="/customer/productdetail/:id" element={<ProductDetails />} />
-          <Route path="/customer/product" element={<Products/>} />
-          <Route path="/customer/Setting" element={<Settings />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/productdetail/:id" element={<ProductDetails />} />
+        <Route path="/product" element={<Products/>} />
+        <Route path="/Setting" element={<Settings />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/customer" element={!isuser && <Navigate to="/login"/>}>
+           <Route path="/customer/dashboard" element={<Dashboard/>}/>
           <Route path="/customer/invoice" element={<Invoice />} />
-          <Route path="/customer/vieworderhistory" element={<ViewOrderHistory />} />
-          <Route path="/customer/menu" element={<Menu />} />
+          <Route path="/customer/vieworderhistory" element={<ViewOrderHistory />} />    
         </Route>
-
-    
-
       </Routes>
 
     </>

@@ -132,7 +132,7 @@ function ViewProduct() {
                                 <div className="flex items-center justify-between gap20 flex-grow">
               
                              
-                                <div className="name" style={{display:"flex", flexDirection:"row" , gap:"20px"}}>
+                                <div className="name" style={{display:"flex",fontWeight:"bolder", fontSize:"medium", flexDirection:"row" , gap:"20px"}}>
                                   <div  className="image no-bg">
                                       {product.imageUrl && (
                                         <img src={product.imageUrl}  alt={product.name}  style={{height:"50px" , width:"50px"  , borderRadius:"10px"}}/>

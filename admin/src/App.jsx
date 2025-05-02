@@ -3,8 +3,9 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { ToastContainer } from 'react-toastify'
-import { Route, Routes } from 'react-router'
+import { Navigate, Route, Routes } from 'react-router'
 import {AdminDashboard,AddCategory,UpdateCategory,UpdateProduct,AddProduct,ViewCategory, ViewProduct, ViewOrders, AdminLogin}from './pages'
+import { useAdminStore } from './store/admin'
 // import AddCategory from './pages/AddCategory'
 // import UpdateCategory from './pages/UpdateCategory'
 // import UpdateProduct from './pages/UpdateProduct'
@@ -16,16 +17,14 @@ import {AdminDashboard,AddCategory,UpdateCategory,UpdateProduct,AddProduct,ViewC
 
 function App() {
 
-
+   let isadmin = useAdminStore((store) =>  store.isadmin)
   return (
     <>
       <ToastContainer />
       <Routes>
         <Route path="/" element={<AdminLogin/>}/>
-        <Route path="/admin" >
-
-          <Route index element={<AdminDashboard />} />
-
+        <Route path="/admin" element={!isadmin && <Navigate to="/"/>} >
+          <Route path="/admin/admindashboard" element={<AdminDashboard />} />
           <Route path="/admin/addcategory" element={<AddCategory />} />
           <Route path="/admin/updatecategory/:id" element={<UpdateCategory />} />
           <Route path="/admin/updateproduct/:id" element={<UpdateProduct />} />
@@ -33,11 +32,7 @@ function App() {
           <Route path="/admin/viewcategory" element={<ViewCategory />} />
           <Route path="/admin/viewproduct" element={<ViewProduct />} />
           <Route path="/admin/vieworders" element={<ViewOrders />} />
-
-
-
         </Route>
-
       </Routes>
 
 

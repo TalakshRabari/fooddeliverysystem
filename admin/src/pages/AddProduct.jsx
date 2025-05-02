@@ -141,10 +141,7 @@ function AddProduct() {
               <PageTitleAdmin title="Add Product" />
               {/* form-add-product */}
               <form className="tf-section-2 form-add-product" onSubmit={addProduct}>
-                <div cl
-                
-                
-                assName="wg-box">
+                <div className="wg-box">
                   <fieldset className="name">
                     <div className="body-title mb-10">Product name <span className="tf-color-1">*</span></div>
                     <input

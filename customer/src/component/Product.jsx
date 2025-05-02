@@ -9,7 +9,7 @@ function Product({ name, desc, price, category, url, id }) {
                 <div className="box-container">
                    
                     <div className="content-box"  style={{display:"flex", flexDirection:"column" , paddingTop: "20px"}}>
-                    <Link to={`/customer/productdetail/${id}`}>
+                    <Link to={`/productdetail/${id}`}>
                         <div className="img-box mb-64" >
 
 

@@ -6,6 +6,7 @@
 // import "./css/vendor/slick.css"
 import Footer from "../component/Footer"
 import Header from "../component/Header"
+import HeaderUsedashboard from "../component/HeaderUserdashboard"
 import PageTitle from "../component/PageTitle"
 
 function Menu(){
@@ -15,7 +16,7 @@ function Menu(){
   {/* Main Wrapper Start */}
   <div id="scroll-container">
     {/* HEADER MENU START */}
-            <Header/>
+            <HeaderUsedashboard/>
     {/* HEADER MENU END */}
     {/* TITLE BANNER START */}
             <PageTitle title="Menu"/>

@@ -15,6 +15,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth"
 import { updateProfile } from "firebase/auth"
 import { success , error } from "../store/message"
 import { useNavigate } from "react-router-dom"
+import HeaderUsedashboard from "../component/HeaderUserdashboard"
 
 function Register() {
 
@@ -33,7 +34,7 @@ function Register() {
                 displayname: fname +" "+lname
               })
               success("Customer Registration successfull")
-
+              navigate('/customer');
             }
            }catch(err)
        {
@@ -41,14 +42,14 @@ function Register() {
         console.log(err);
        }  
 
-       navigate('/customer');
+     
      }
   return (
     <>
       <div>
         <div id="scroll-container">
           {/* HEADER MENU START */}
-          <Header />
+          <HeaderUsedashboard/>
           {/* HEADER MENU END */}
           {/* TITLE BANNER START */}
           <PageTitle title="Register" />
@@ -109,7 +110,7 @@ function Register() {
                         </div>
                       </div>
                       <div className="col-lg-6">
-                      <NavLink to="/customer/dashboard">  <button type="button" onClick={register} className="cus-btn border-0 sign-submit-btn">  
+                      <NavLink>  <button type="button" onClick={register} className="cus-btn border-0 sign-submit-btn">  
                           <span>Sign Up</span>
                         </button>
                         </NavLink>

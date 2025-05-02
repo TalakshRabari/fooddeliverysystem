@@ -12,6 +12,7 @@ import { useNavigate, useParams } from "react-router"
 import { db } from "../store/firebaseconfig"
 import { doc, getDoc } from "firebase/firestore"
 import { useCartStore } from "../store/cart"
+import HeaderUsedashboard from "../component/HeaderUserdashboard"
 
 
 function ProductDetails() {
@@ -58,7 +59,7 @@ function ProductDetails() {
 
             <div>
                 {/* HEADER MENU START */}
-                <Header />
+                <HeaderUsedashboard/>
                 {/* HEADER MENU END */}
                 {/* TITLE BANNER START */}
                 <PageTitle title="Product Details" />
@@ -102,7 +103,7 @@ function ProductDetails() {
                                             </div>
                                             <button type="button" className="cus-btn border-0" onClick={() => {
                                                 addToCart({ ...product, quantity: quantity, tprice: (quantity * product.price) })
-                                                navigate("/customer/checkout")
+                                                navigate("/checkout")
                                             }}>add to cart</button>
                                         </div>
                                     </div>

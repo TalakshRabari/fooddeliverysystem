@@ -8,6 +8,7 @@ import { NavLink } from "react-router"
 import Footer from "../component/Footer"
 import Header from "../component/Header"
 import PageTitle from "../component/PageTitle"
+import HeaderUsedashboard from "../component/HeaderUserdashboard"
 
 function Shop() {
     return (
@@ -15,7 +16,7 @@ function Shop() {
 
             <div id="scroll-container">
                 {/* HEADER MENU START */}
-                  <Header/>
+                  <HeaderUsedashboard/>
                 {/* HEADER MENU END */}
                 {/* TITLE BANNER START */}
                   <PageTitle title="Shop"/>

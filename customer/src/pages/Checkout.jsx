@@ -12,6 +12,7 @@ import { useCartStore } from "../store/cart"
 import { useState } from "react"
 import { db ,auth} from "../store/firebaseconfig"
 import React from "react"
+import { error, success } from "../store/message"
 function Checkout(){
   let totalPrice = useCartStore((store)=>store.totalPrice)
   let cart = useCartStore((store)=>store.cart)
@@ -29,6 +30,7 @@ function Checkout(){
   let [payment , setPayment] = useState("NOT PAID")
 
   async function addorder(){
+    try{
     let colRef = collection(db,"orders")
     await addDoc(colRef,{
       fnm:fnm,
@@ -47,6 +49,11 @@ function Checkout(){
       date:serverTimestamp(),
       totalPrice:totalPrice,
     })
+    success("Order Placed Successfully!")
+  } catch(err){
+    error("Something went wrong!");
+    console.log(err)
+  }
   }
 
     return(

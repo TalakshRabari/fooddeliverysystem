@@ -7,7 +7,7 @@
 // import   "./css/swiper-bundle.min.css"
 import { collection, getDocs, query, where } from "firebase/firestore"
 import { useState } from "react"
-import { NavLink, replace, useNavigate } from "react-router"
+import { Link, NavLink, replace, useNavigate } from "react-router"
 import { db } from "../store/firebaseconfig"
 import {useAdminStore} from "../store/admin"
 // import {success , error} from "react-toastify"
@@ -28,7 +28,7 @@ async  function adminlogin(){
     let snapshot = await getDocs(q)
     if(snapshot.docs.length>0){
       login(snapshot.docs[0].data())
-      navigate("/admin/dashboard",{  replace:true})
+      navigate("/admin/admindashboard", {  replace:true})
     }else{ 
       error("Something went wrong!")
     }
@@ -56,7 +56,7 @@ async  function adminlogin(){
                   <input className="password-input"  onChange={ (e) => setPwd(e.target.value)} type="password" placeholder="Enter your password" name="password" tabIndex={0} />
                   <span className="show-pass">
                     <i className="icon-eye view" />
-                    <i className="icon-eye-off hide" />
+                    <i className="icon-eye-off hide" />``
                   </span>
                 </fieldset>
                 <div className="flex justify-between items-center">
@@ -68,6 +68,13 @@ async  function adminlogin(){
                 </div>
                 <NavLink to="/admin"><button onClick={adminlogin}  className="tf-button w-full">Login</button></NavLink>
               </form>
+              <div className="body-text text-center">
+
+                          <NavLink to="http://localhost:5174" className="boddy-text tf-colour"> Go To Customer Side </NavLink>
+              </div>
+              <div>
+              
+              </div>
             </div>
           </div>
           <div className="text-tiny">Copyright © 2024 Remos, All rights reserved.</div>

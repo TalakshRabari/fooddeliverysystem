@@ -13,6 +13,7 @@ import { useState } from "react"
 import { Link, useNavigate } from "react-router"
 import { auth } from "../store/firebaseconfig"
 import { error, success } from "../store/message"
+import HeaderUsedashboard from "../component/HeaderUserdashboard"
 
 function Login(){
 
@@ -28,12 +29,13 @@ function Login(){
       useUserStore.getState().login(user);
       if(userCredentials.user != null){
        success("Customer Login Succesfully!")
+       navigate('/customer/dashboard');
      }}
      catch(err){
       error("Something Went Wrong!")
       console.log(err)
      }
-   navigate('/customer');
+ 
   }
 
     return(
@@ -41,7 +43,7 @@ function Login(){
                               <div>
   <div id="scroll-container">
     {/* HEADER MENU START */}
-     <Header/>  
+     <HeaderUsedashboard/>
     {/* HEADER MENU END */}
     {/* TITLE BANNER START */}
           <PageTitle title="Login"/>

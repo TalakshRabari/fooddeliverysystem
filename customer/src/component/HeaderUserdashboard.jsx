@@ -14,16 +14,16 @@ function HeaderUsedashboard(){
             <ul className="main-menu__list">
               <li><NavLink to="/shop">Shop</NavLink></li>
               <li>
-                <NavLink to="/customer/menu">Menu</NavLink>
+                <NavLink to="/menu">Menu</NavLink>
               </li>
               <li>
                 <NavLink to="/contact">Contact Us</NavLink>
               </li>
               <li>
-                <NavLink to="/customer/product">Products</NavLink>
+                <NavLink to="/product">Products</NavLink>
               </li>
               <li>
-                <NavLink to="/customer/checkout">Checkout</NavLink>
+                <NavLink to="/checkout">Checkout</NavLink>
               </li>
               <li>
                 <NavLink to="/customer/vieworderhistory">Order History</NavLink>
@@ -31,7 +31,7 @@ function HeaderUsedashboard(){
               <li>   Navigate To
                 <ul>
                   <li>
-                <NavLink to="/admin">Admin Side</NavLink>
+                <NavLink to="http://localhost:5173/admin">Admin Side</NavLink>
                     </li>
                 </ul>
               </li>
